@@ -39,7 +39,7 @@ export default function CallButton({ user }) {
 
   return (
     <div>
-      {isConnected 
+      {isConnected
       ? <Conference />
       : <button className="btn btn-dark m-3 w-50" onClick={handleCall}>
           Call

@@ -19,13 +19,15 @@ export default function UserList() {
     }, []);
 
   return (
-    <div>
-    {friendliis.map((friendlii, index) =>(
-        <div className='card m-2 border' key={index}>
+    <div style={{ display: "flex", flexWrap: "wrap" }}>
+      {friendliis.map((friendlii, index) => (
+        <div key={index} style={{ flex: "0 0 300px", margin: "10px" }}>
+          <div style={{ border: "1px solid #ccc", padding: "15px" }}>
             <p>{friendlii.name}</p>
             <CallButton user={friendlii} />
+          </div>
         </div>
-    ))}
+      ))}
     </div>
-  )
+  );
 }
